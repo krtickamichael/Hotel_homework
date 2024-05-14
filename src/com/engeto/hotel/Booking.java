@@ -10,19 +10,23 @@ public class Booking {
     private LocalDate checkIn;
     private LocalDate checkOut;
     private boolean typeOfVacation;
-    private Room roomNumber;
-    private List<Room> otherRooms = new ArrayList<>();
+    private int roomNumber;
+    private List<Booking> otherReservation = new ArrayList<>();
 
     public Booking(String name, String surname, LocalDate checkIn, LocalDate checkOut,
-                   boolean typeOfVacation, Room roomNumber, List<Room> otherRooms)
-    {
+                   boolean typeOfVacation, int roomNumber) {
+
         this.name = name;
         this.surname = surname;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
         this.typeOfVacation = typeOfVacation;
         this.roomNumber = roomNumber;
-        this.otherRooms = otherRooms;
+    }
+
+    public String getDescription() {
+        return "Name:"+name+ " Surname:"+surname+ " CheckIn:"+checkIn+
+                " CheckOut:"+checkOut+ " Room number:"+roomNumber;
     }
 
     public String getName() {
@@ -65,19 +69,19 @@ public class Booking {
         this.typeOfVacation = typeOfVacation;
     }
 
-    public Room getRoomNumber() {
+    public int getRoomNumber() {
         return roomNumber;
     }
 
-    public void setRoomNumber(Room roomNumber) {
+    public void setRoomNumber(int roomNumber) {
         this.roomNumber = roomNumber;
     }
 
-    public List<Room> getOtherRooms() {
-        return otherRooms;
+    public List<Booking> getOtherReservation() {
+        return otherReservation;
     }
 
-    public void setOtherRooms(List<Room> otherRooms) {
-        this.otherRooms = otherRooms;
+    public void setOtherReservation(List<Booking> otherReservation) {
+        this.otherReservation = otherReservation;
     }
 }
