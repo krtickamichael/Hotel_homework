@@ -1,8 +1,6 @@
 package com.engeto.hotel;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Booking {
     private String name;
@@ -11,7 +9,8 @@ public class Booking {
     private LocalDate checkOut;
     private boolean typeOfVacation;
     private int roomNumber;
-    private List<Booking> otherReservation = new ArrayList<>();
+
+
 
     public Booking(String name, String surname, LocalDate checkIn, LocalDate checkOut,
                    boolean typeOfVacation, int roomNumber) {
@@ -22,6 +21,8 @@ public class Booking {
         this.checkOut = checkOut;
         this.typeOfVacation = typeOfVacation;
         this.roomNumber = roomNumber;
+
+
     }
 
     public String getDescription() {
@@ -77,11 +78,4 @@ public class Booking {
         this.roomNumber = roomNumber;
     }
 
-    public List<Booking> getOtherReservation() {
-        return otherReservation;
-    }
-
-    public void setOtherReservation(List<Booking> otherReservation) {
-        this.otherReservation = otherReservation;
-    }
 }
