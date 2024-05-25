@@ -26,9 +26,7 @@ public class Main {
 
   Booking booking1 = new Booking(guest1.getName(), guest1.getSurname(),
           LocalDate.of(2021,7,19),
-          LocalDate.of(2021, 7, 26), true,
-          room1.getRoomNumber(),
-          room1.getBed(), room1.isBalcony(), room1.isSeaview(), room1.getPricePerNight());
+          LocalDate.of(2021, 7, 26), true,room1);
 
   List<Booking> BookingList = new ArrayList<>();
   BookingList.add(booking1);
@@ -37,8 +35,7 @@ public class Main {
           guest1.getSurname()+" and "+guest2.getSurname(),
           LocalDate.of(2024,9,1),
           LocalDate.of(2024, 9, 14),
-          true, room3.getRoomNumber(), room3.getBed(), room3.isBalcony(),
-          room3.isSeaview(), room3.getPricePerNight()));
+          true, room3));
 
 
   System.out.println(" ");

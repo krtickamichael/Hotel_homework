@@ -8,33 +8,27 @@ public class Booking {
     private LocalDate checkIn;
     private LocalDate checkOut;
     private boolean typeOfVacation;
-    private int roomNumber;
-    private int bed;
-    private boolean balcony;
-    private boolean seaview;
-    private int pricePerNight;
+    private Room room;
 
     public Booking(String name, String surname, LocalDate checkIn,
-                   LocalDate checkOut, boolean typeOfVacation,
-                   int roomNumber,int bed, boolean balcony, boolean seaview,
-                   int pricePerNight)
+                   LocalDate checkOut, boolean typeOfVacation,Room room)
+
     {
         this.name = name;
         this.surname = surname;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
         this.typeOfVacation = typeOfVacation;
-        this.roomNumber = roomNumber;
-        this.bed = bed;
-        this.balcony = balcony;
-        this.seaview = seaview;
-        this.pricePerNight = pricePerNight;
-    }
-    public String getDescription() {
-        return "Name:"+name+ " Surname:"+surname+ " CheckIn:"+checkIn+
-                " CheckOut:"+checkOut+ " Room number:"+roomNumber;
+        this.room = room;
+
+
     }
 
+    public String getDescription() {
+        return "Name:"+name+ " Surname:"+surname+ " CheckIn:"+checkIn+
+                " CheckOut:"+checkOut+ " Room number:"+room.getBed();
+
+    }
     public String getName() {
         return name;
     }
@@ -74,13 +68,4 @@ public class Booking {
     public void setTypeOfVacation(boolean typeOfVacation) {
         this.typeOfVacation = typeOfVacation;
     }
-
-    public int getRoomNumber() {
-        return roomNumber;
-    }
-
-    public void setRoomNumber(int roomNumber) {
-        this.roomNumber = roomNumber;
-    }
-
 }
