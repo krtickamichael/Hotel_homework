@@ -5,17 +5,17 @@ import java.time.LocalDate;
 public class Guest {
     private String name;
     private String surname;
-    private LocalDate date = LocalDate.now();
+    private LocalDate birthdate;
 
-    public Guest(String name, String surname, LocalDate date) {
+    public Guest(String name, String surname, LocalDate birthdate) {
         this.name = name;
         this.surname = surname;
-        this.date = LocalDate.now();
+        this.birthdate = birthdate;
 
     }
 
     public String getDescription() {
-        return name +" "+ surname + " (" +date+ ")";
+        return name +" "+ surname + " (" + birthdate + ")";
 
     }
 
@@ -35,12 +35,12 @@ public class Guest {
         this.surname = surname;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public LocalDate getBirthdate() {
+        return birthdate;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setBirthdate(LocalDate birthdate) {
+        this.birthdate = birthdate;
     }
 }
 
